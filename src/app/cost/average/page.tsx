@@ -67,7 +67,7 @@ export default function CostAveragePage() {
 
         {/* Hero */}
         <section className="py-8">
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-navy mb-4">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-dark mb-4">
             雨漏り修理の費用相場ガイド
           </h1>
           <p className="text-text leading-relaxed mb-6">
@@ -92,12 +92,12 @@ export default function CostAveragePage() {
               <tbody>
                 {locationCosts.map((c) => (
                   <tr key={c.location}>
-                    <td className="font-bold text-navy">
+                    <td className="font-bold text-dark">
                       {c.href ? (
                         <Link href={c.href} className="hover:underline">{c.location}</Link>
                       ) : c.location}
                     </td>
-                    <td className="font-semibold text-amber-dark">{c.range}</td>
+                    <td className="font-semibold text-accent-dark">{c.range}</td>
                     <td className="text-sm">{c.detail}</td>
                   </tr>
                 ))}
@@ -113,7 +113,7 @@ export default function CostAveragePage() {
             {workCosts.map((w) => (
               <div key={w.work} className="card-hover">
                 <div className="flex flex-wrap items-center gap-3 mb-2">
-                  <h3 className="font-bold text-navy text-lg">{w.work}</h3>
+                  <h3 className="font-bold text-dark text-lg">{w.work}</h3>
                   <span className="tag-pill tag-pill--amber">{w.range}</span>
                 </div>
                 <p className="text-sm text-text-light">{w.detail}</p>
@@ -135,11 +135,11 @@ export default function CostAveragePage() {
                 { title: "追加費用の条件", desc: "追加費用が発生する条件が記載されているか。施工中に問題が見つかった場合の対応方針を事前に確認しましょう。" },
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-navy text-white text-sm font-bold flex-shrink-0">
+                  <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold flex-shrink-0">
                     {i + 1}
                   </span>
                   <div>
-                    <h3 className="font-bold text-navy mb-1">{item.title}</h3>
+                    <h3 className="font-bold text-dark mb-1">{item.title}</h3>
                     <p className="text-sm text-text-light">{item.desc}</p>
                   </div>
                 </div>
@@ -158,7 +158,7 @@ export default function CostAveragePage() {
                   {i + 1}
                 </span>
                 <div>
-                  <h3 className="font-bold text-navy text-lg mb-1">{tip.title}</h3>
+                  <h3 className="font-bold text-dark text-lg mb-1">{tip.title}</h3>
                   <p className="text-sm text-text-light leading-relaxed">{tip.desc}</p>
                 </div>
               </div>
@@ -190,7 +190,7 @@ export default function CostAveragePage() {
               { name: "火災保険の活用", href: "/cost/insurance", tag: "保険適用" },
             ].map((link) => (
               <Link key={link.href} href={link.href} className="card-hover text-center">
-                <h3 className="font-bold text-navy mb-1">{link.name}</h3>
+                <h3 className="font-bold text-dark mb-1">{link.name}</h3>
                 <span className="tag-pill text-xs">{link.tag}</span>
               </Link>
             ))}
@@ -199,7 +199,7 @@ export default function CostAveragePage() {
 
         {/* CTA */}
         <section className="py-8">
-          <div className="bg-gradient-to-r from-navy to-navy-light rounded-2xl p-8 text-center text-white">
+          <div className="bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-8 text-center text-white">
             <h2 className="text-2xl font-extrabold mb-3">まずは無料で見積もりを比較</h2>
             <p className="text-white/80 text-sm mb-4">複数業者の見積もりを比較して、適正価格で修理しましょう</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

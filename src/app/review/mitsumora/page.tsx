@@ -69,7 +69,7 @@ export default function MitsumoraPage() {
           <div className="flex items-center gap-3 mb-4">
             <span className="rank-badge rank-badge--2">2</span>
             <div>
-              <h1 className="text-2xl sm:text-3xl font-extrabold text-navy">ミツモア</h1>
+              <h1 className="text-2xl sm:text-3xl font-extrabold text-dark">ミツモア</h1>
               <p className="text-sm text-text-light">meetsmore.com</p>
             </div>
           </div>
@@ -92,10 +92,10 @@ export default function MitsumoraPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {steps.map((s) => (
               <div key={s.num} className="card-hover text-center">
-                <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-navy text-white text-xl font-extrabold mb-3">
+                <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white text-xl font-extrabold mb-3">
                   {s.num}
                 </span>
-                <h3 className="font-bold text-navy mb-2">{s.title}</h3>
+                <h3 className="font-bold text-dark mb-2">{s.title}</h3>
                 <p className="text-sm text-text-light">{s.desc}</p>
               </div>
             ))}
@@ -106,22 +106,22 @@ export default function MitsumoraPage() {
         <section className="py-8">
           <h2 className="section-title">メリット・デメリット</h2>
           <div className="grid sm:grid-cols-2 gap-6">
-            <div className="card-hover !border-green/30">
-              <h3 className="font-bold text-green text-lg mb-3">メリット</h3>
+            <div className="card-hover !border-primary/30">
+              <h3 className="font-bold text-primary text-lg mb-3">メリット</h3>
               <ul className="space-y-2">
                 {pros.map((p, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm">
-                    <span className="text-green mt-0.5 flex-shrink-0">&#10003;</span>{p}
+                    <span className="text-primary mt-0.5 flex-shrink-0">&#10003;</span>{p}
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="card-hover !border-amber/30">
-              <h3 className="font-bold text-amber-dark text-lg mb-3">デメリット</h3>
+            <div className="card-hover !border-accent/30">
+              <h3 className="font-bold text-accent-dark text-lg mb-3">デメリット</h3>
               <ul className="space-y-2">
                 {cons.map((c, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm">
-                    <span className="text-amber-dark mt-0.5 flex-shrink-0">&#9650;</span>{c}
+                    <span className="text-accent-dark mt-0.5 flex-shrink-0">&#9650;</span>{c}
                   </li>
                 ))}
               </ul>
@@ -134,7 +134,7 @@ export default function MitsumoraPage() {
           <h2 className="section-title">ミツモアが向いている人・向いていない人</h2>
           <div className="grid sm:grid-cols-2 gap-6">
             <div className="card-hover">
-              <h3 className="font-bold text-green mb-3">向いている人</h3>
+              <h3 className="font-bold text-primary mb-3">向いている人</h3>
               <ul className="space-y-2 text-sm text-text-light">
                 <li>&#10003; 複数業者を比較して最安値を見つけたい方</li>
                 <li>&#10003; 口コミ・評価を見て業者を選びたい方</li>
@@ -143,7 +143,7 @@ export default function MitsumoraPage() {
               </ul>
             </div>
             <div className="card-hover">
-              <h3 className="font-bold text-amber-dark mb-3">向いていない人</h3>
+              <h3 className="font-bold text-accent-dark mb-3">向いていない人</h3>
               <ul className="space-y-2 text-sm text-text-light">
                 <li>&#9650; 今すぐ緊急で修理が必要な方</li>
                 <li>&#9650; 複数業者からの連絡を受けたくない方</li>
@@ -168,7 +168,7 @@ export default function MitsumoraPage() {
 
         {/* CTA */}
         <section className="py-8">
-          <div className="bg-gradient-to-r from-navy to-navy-light rounded-2xl p-8 text-center text-white">
+          <div className="bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-8 text-center text-white">
             <h2 className="text-2xl font-extrabold mb-3">ミツモアで無料一括見積もり</h2>
             <p className="text-white/80 text-sm mb-4">最大5社比較・完全無料・最短2分で依頼完了</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -191,7 +191,7 @@ export default function MitsumoraPage() {
               { name: "くらしのマーケット", slug: "kurashi", tag: "口コミ" },
             ].map((s) => (
               <Link key={s.slug} href={`/review/${s.slug}/`} className="card-hover text-center">
-                <h3 className="font-bold text-navy mb-1">{s.name}</h3>
+                <h3 className="font-bold text-dark mb-1">{s.name}</h3>
                 <span className="tag-pill text-xs">{s.tag}</span>
               </Link>
             ))}

@@ -63,7 +63,7 @@ export default function CauseRoofPage() {
 
         {/* Hero */}
         <section className="py-8">
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-navy mb-4">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-dark mb-4">
             屋根の雨漏り原因8つ
           </h1>
           <p className="text-text leading-relaxed mb-6">
@@ -79,11 +79,11 @@ export default function CauseRoofPage() {
           <div className="space-y-4">
             {causes.map((c) => (
               <div key={c.num} className="card-hover flex items-start gap-4">
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-navy text-white text-lg font-extrabold flex-shrink-0">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white text-lg font-extrabold flex-shrink-0">
                   {c.num}
                 </span>
                 <div>
-                  <h3 className="font-bold text-navy text-lg mb-1">{c.title}</h3>
+                  <h3 className="font-bold text-dark text-lg mb-1">{c.title}</h3>
                   <p className="text-sm text-text-light leading-relaxed">{c.desc}</p>
                 </div>
               </div>
@@ -98,14 +98,14 @@ export default function CauseRoofPage() {
             <ul className="space-y-3">
               {checkPoints.map((point, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <span className="text-navy font-bold flex-shrink-0">&#9654;</span>
+                  <span className="text-dark font-bold flex-shrink-0">&#9654;</span>
                   <p className="text-sm text-text-light">{point}</p>
                 </li>
               ))}
             </ul>
-            <div className="bg-bg rounded-lg p-4 mt-6">
+            <div className="bg-surface-alt rounded-lg p-4 mt-6">
               <p className="text-sm text-text-light">
-                <span className="font-bold text-amber-dark">注意：</span>
+                <span className="font-bold text-accent-dark">注意：</span>
                 屋根に上がっての確認は転落の危険があります。地上からの目視と室内のチェックにとどめ、
                 詳細な点検は専門業者に依頼しましょう。多くの業者が無料点検に対応しています。
               </p>
@@ -137,7 +137,7 @@ export default function CauseRoofPage() {
               { name: "火災保険の活用", href: "/cost/insurance", tag: "保険" },
             ].map((link) => (
               <Link key={link.href} href={link.href} className="card-hover text-center">
-                <h3 className="font-bold text-navy mb-1">{link.name}</h3>
+                <h3 className="font-bold text-dark mb-1">{link.name}</h3>
                 <span className="tag-pill text-xs">{link.tag}</span>
               </Link>
             ))}
@@ -146,7 +146,7 @@ export default function CauseRoofPage() {
 
         {/* CTA */}
         <section className="py-8">
-          <div className="bg-gradient-to-r from-navy to-navy-light rounded-2xl p-8 text-center text-white">
+          <div className="bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-8 text-center text-white">
             <h2 className="text-2xl font-extrabold mb-3">屋根の雨漏りを無料で点検</h2>
             <p className="text-white/80 text-sm mb-4">原因の特定から修理まで、プロに任せて安心</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

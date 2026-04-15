@@ -131,19 +131,18 @@ export default function HomePage() {
       />
 
       {/* ===== Hero ===== */}
-      <section className="relative bg-gradient-to-br from-navy via-navy-light to-navy-dark text-white overflow-hidden">
+      <section className="relative bg-gradient-to-br from-primary via-primary-dark to-dark text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-72 h-72 bg-amber rounded-full blur-3xl" />
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-green rounded-full blur-3xl" />
+          <div className="absolute top-10 left-10 w-72 h-72 bg-accent rounded-full blur-3xl" />
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-primary-light rounded-full blur-3xl" />
         </div>
         <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 text-center">
-          <p className="inline-block tag-pill !bg-amber/20 !text-amber-light text-sm mb-4">
+          <p className="inline-block tag-pill !bg-white/15 !text-accent text-sm mb-4">
             2026年4月最新版
           </p>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
-            雨漏りでお困りですか？<br className="sm:hidden" />
-            <span className="text-amber-light">信頼できる修理業者</span>を<br className="hidden sm:block" />
-            無料で比較
+            雨漏りの不安、<br className="sm:hidden" />
+            <span className="text-accent">今すぐ解消</span>しませんか？
           </h1>
           <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
             厳選5社の料金・口コミ・対応力を徹底比較。最短30分で駆けつけ、24時間365日対応の業者も。あなたの状況に合った業者がすぐ見つかります。
@@ -158,15 +157,15 @@ export default function HomePage() {
               { num: "全国", label: "対応エリア" },
             ].map((s) => (
               <div key={s.label} className="glass-card !bg-white/10 !border-white/20 p-4 text-center">
-                <p className="text-2xl font-extrabold text-amber-light">{s.num}</p>
+                <p className="text-2xl font-extrabold text-accent">{s.num}</p>
                 <p className="text-xs text-white/70 mt-1">{s.label}</p>
               </div>
             ))}
           </div>
 
           {/* Emergency CTA */}
-          <div className="glass-card !bg-white/10 !border-amber/30 p-6 max-w-lg mx-auto">
-            <p className="text-sm text-amber-light font-bold mb-2">
+          <div className="glass-card !bg-white/10 !border-accent/30 p-6 max-w-lg mx-auto">
+            <p className="text-sm text-accent font-bold mb-2">
               今まさに雨漏りしている方へ
             </p>
             <p className="text-white/80 text-sm mb-4">
@@ -203,13 +202,13 @@ export default function HomePage() {
                     <td>
                       <span className={`rank-badge rank-badge--${s.rank}`}>{s.rank}</span>
                     </td>
-                    <td className="font-bold text-navy">
+                    <td className="font-bold text-primary-dark">
                       <Link href={`/review/${s.slug}/`} className="hover:underline">
                         {s.name}
                       </Link>
                     </td>
                     <td>{s.hours}</td>
-                    <td className="font-semibold text-amber-dark">{s.cost}</td>
+                    <td className="font-semibold text-accent-dark">{s.cost}</td>
                     <td>{s.area}</td>
                     <td className="text-sm">{s.feature}</td>
                   </tr>
@@ -228,7 +227,7 @@ export default function HomePage() {
                 <div className="flex items-start gap-4 mb-4">
                   <span className={`rank-badge rank-badge--${s.rank}`}>{s.rank}</span>
                   <div>
-                    <h3 className="text-xl font-extrabold text-navy">{s.name}</h3>
+                    <h3 className="text-xl font-extrabold text-dark">{s.name}</h3>
                     <p className="text-sm text-text-light">{s.url}</p>
                   </div>
                 </div>
@@ -242,22 +241,22 @@ export default function HomePage() {
 
                 <div className="grid sm:grid-cols-2 gap-4 mb-4">
                   <div>
-                    <h4 className="font-bold text-green text-sm mb-2">メリット</h4>
+                    <h4 className="font-bold text-primary text-sm mb-2">メリット</h4>
                     <ul className="space-y-1">
                       {s.pros.map((p, i) => (
                         <li key={i} className="flex items-start gap-2 text-sm">
-                          <span className="text-green mt-0.5 flex-shrink-0">&#10003;</span>
+                          <span className="text-primary mt-0.5 flex-shrink-0">&#10003;</span>
                           {p}
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-bold text-amber-dark text-sm mb-2">デメリット</h4>
+                    <h4 className="font-bold text-accent-dark text-sm mb-2">デメリット</h4>
                     <ul className="space-y-1">
                       {s.cons.map((c, i) => (
                         <li key={i} className="flex items-start gap-2 text-sm">
-                          <span className="text-amber-dark mt-0.5 flex-shrink-0">&#9650;</span>
+                          <span className="text-accent-dark mt-0.5 flex-shrink-0">&#9650;</span>
                           {c}
                         </li>
                       ))}
@@ -265,8 +264,8 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <p className="text-sm bg-bg px-4 py-3 rounded-lg mb-4">
-                  <span className="font-bold text-navy">こんな方におすすめ：</span>{s.recommend}
+                <p className="text-sm bg-surface-alt px-4 py-3 rounded-lg mb-4">
+                  <span className="font-bold text-dark">こんな方におすすめ：</span>{s.recommend}
                 </p>
 
                 <div className="flex flex-wrap gap-3">
@@ -292,7 +291,7 @@ export default function HomePage() {
                   <span className="tag-pill tag-pill--amber text-lg font-bold px-4 py-1">
                     {c.location}
                   </span>
-                  <span className="text-xl font-extrabold text-navy">{c.range}</span>
+                  <span className="text-xl font-extrabold text-dark">{c.range}</span>
                 </div>
                 <p className="text-sm text-text-light">{c.detail}</p>
               </div>
@@ -312,11 +311,11 @@ export default function HomePage() {
           <div className="space-y-4">
             {choosePoints.map((p, i) => (
               <div key={i} className="card-hover flex items-start gap-4">
-                <span className="rank-badge rank-badge--4 flex-shrink-0 !w-10 !h-10 !text-base">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-extrabold text-base flex-shrink-0">
                   {i + 1}
                 </span>
                 <div>
-                  <h3 className="font-bold text-navy text-lg mb-1">{p.title}</h3>
+                  <h3 className="font-bold text-dark text-lg mb-1">{p.title}</h3>
                   <p className="text-sm text-text-light leading-relaxed">{p.desc}</p>
                 </div>
               </div>
@@ -330,24 +329,24 @@ export default function HomePage() {
           <div className="glass-card p-6 sm:p-8">
             <div className="space-y-4">
               <div>
-                <h3 className="font-bold text-navy text-lg mb-2">火災保険が適用されるケース</h3>
+                <h3 className="font-bold text-dark text-lg mb-2">火災保険が適用されるケース</h3>
                 <ul className="space-y-2 text-sm text-text-light">
-                  <li className="flex items-start gap-2"><span className="text-green flex-shrink-0">&#10003;</span>台風・暴風雨による屋根の損傷</li>
-                  <li className="flex items-start gap-2"><span className="text-green flex-shrink-0">&#10003;</span>雹（ひょう）による外壁・屋根の破損</li>
-                  <li className="flex items-start gap-2"><span className="text-green flex-shrink-0">&#10003;</span>大雪による雨どいの破損</li>
-                  <li className="flex items-start gap-2"><span className="text-green flex-shrink-0">&#10003;</span>落雷による建物の損傷</li>
+                  <li className="flex items-start gap-2"><span className="text-primary flex-shrink-0">&#10003;</span>台風・暴風雨による屋根の損傷</li>
+                  <li className="flex items-start gap-2"><span className="text-primary flex-shrink-0">&#10003;</span>雹（ひょう）による外壁・屋根の破損</li>
+                  <li className="flex items-start gap-2"><span className="text-primary flex-shrink-0">&#10003;</span>大雪による雨どいの破損</li>
+                  <li className="flex items-start gap-2"><span className="text-primary flex-shrink-0">&#10003;</span>落雷による建物の損傷</li>
                 </ul>
               </div>
               <div>
-                <h3 className="font-bold text-navy text-lg mb-2">火災保険が適用されないケース</h3>
+                <h3 className="font-bold text-dark text-lg mb-2">火災保険が適用されないケース</h3>
                 <ul className="space-y-2 text-sm text-text-light">
-                  <li className="flex items-start gap-2"><span className="text-amber-dark flex-shrink-0">&#10007;</span>経年劣化による雨漏り</li>
-                  <li className="flex items-start gap-2"><span className="text-amber-dark flex-shrink-0">&#10007;</span>施工不良が原因の雨漏り</li>
-                  <li className="flex items-start gap-2"><span className="text-amber-dark flex-shrink-0">&#10007;</span>被害発生から3年以上経過したもの</li>
+                  <li className="flex items-start gap-2"><span className="text-accent-dark flex-shrink-0">&#10007;</span>経年劣化による雨漏り</li>
+                  <li className="flex items-start gap-2"><span className="text-accent-dark flex-shrink-0">&#10007;</span>施工不良が原因の雨漏り</li>
+                  <li className="flex items-start gap-2"><span className="text-accent-dark flex-shrink-0">&#10007;</span>被害発生から3年以上経過したもの</li>
                 </ul>
               </div>
-              <div className="bg-bg rounded-lg p-4">
-                <p className="text-sm font-bold text-navy mb-1">火災保険申請のポイント</p>
+              <div className="bg-accent/10 rounded-lg p-4 border border-accent/20">
+                <p className="text-sm font-bold text-dark mb-1">火災保険申請のポイント</p>
                 <p className="text-sm text-text-light">
                   被害を発見したら早めに保険会社へ連絡し、修理前の写真を必ず残しておきましょう。
                   火災保険の申請サポートに対応した修理業者を選ぶと、手続きがスムーズに進みます。
@@ -372,7 +371,7 @@ export default function HomePage() {
 
         {/* ===== Bottom CTA ===== */}
         <section className="py-12">
-          <div className="bg-gradient-to-r from-navy to-navy-light rounded-2xl p-8 sm:p-12 text-center text-white">
+          <div className="bg-gradient-to-r from-primary to-dark rounded-2xl p-8 sm:p-12 text-center text-white">
             <h2 className="text-2xl sm:text-3xl font-extrabold mb-4">
               まずは無料で相談・見積もりを
             </h2>

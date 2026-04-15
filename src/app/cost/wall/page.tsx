@@ -58,7 +58,7 @@ export default function CostWallPage() {
 
         {/* Hero */}
         <section className="py-8">
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-navy mb-4">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-dark mb-4">
             外壁の雨漏り修理費用
           </h1>
           <p className="text-text leading-relaxed mb-6">
@@ -84,10 +84,10 @@ export default function CostWallPage() {
               <tbody>
                 {wallTypeCosts.map((w) => (
                   <tr key={w.type}>
-                    <td className="font-bold text-navy">{w.type}</td>
-                    <td className="text-amber-dark font-semibold">{w.caulk}</td>
-                    <td className="text-amber-dark font-semibold">{w.partial}</td>
-                    <td className="text-amber-dark font-semibold">{w.full}</td>
+                    <td className="font-bold text-dark">{w.type}</td>
+                    <td className="text-accent-dark font-semibold">{w.caulk}</td>
+                    <td className="text-accent-dark font-semibold">{w.partial}</td>
+                    <td className="text-accent-dark font-semibold">{w.full}</td>
                   </tr>
                 ))}
               </tbody>
@@ -96,7 +96,7 @@ export default function CostWallPage() {
           <div className="space-y-3 mt-6">
             {wallTypeCosts.map((w) => (
               <div key={w.type} className="glass-card p-4">
-                <h3 className="font-bold text-navy mb-1">{w.type}</h3>
+                <h3 className="font-bold text-dark mb-1">{w.type}</h3>
                 <p className="text-sm text-text-light">{w.note}</p>
               </div>
             ))}
@@ -110,7 +110,7 @@ export default function CostWallPage() {
             {workCosts.map((w) => (
               <div key={w.work} className="card-hover">
                 <div className="flex flex-wrap items-center gap-3 mb-2">
-                  <h3 className="font-bold text-navy text-lg">{w.work}</h3>
+                  <h3 className="font-bold text-dark text-lg">{w.work}</h3>
                   <span className="tag-pill tag-pill--amber">{w.range}</span>
                 </div>
                 <p className="text-sm text-text-light">{w.desc}</p>
@@ -143,7 +143,7 @@ export default function CostWallPage() {
               { name: "火災保険の活用", href: "/cost/insurance", tag: "保険" },
             ].map((link) => (
               <Link key={link.href} href={link.href} className="card-hover text-center">
-                <h3 className="font-bold text-navy mb-1">{link.name}</h3>
+                <h3 className="font-bold text-dark mb-1">{link.name}</h3>
                 <span className="tag-pill text-xs">{link.tag}</span>
               </Link>
             ))}
@@ -152,7 +152,7 @@ export default function CostWallPage() {
 
         {/* CTA */}
         <section className="py-8">
-          <div className="bg-gradient-to-r from-navy to-navy-light rounded-2xl p-8 text-center text-white">
+          <div className="bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-8 text-center text-white">
             <h2 className="text-2xl font-extrabold mb-3">外壁の雨漏りを無料で見積もり</h2>
             <p className="text-white/80 text-sm mb-4">複数業者の見積もりを比較して、適正価格で修理しましょう</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

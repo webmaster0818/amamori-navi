@@ -58,7 +58,7 @@ export default function CostCeilingPage() {
 
         {/* Hero */}
         <section className="py-8">
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-navy mb-4">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-dark mb-4">
             天井の雨漏り修理費用
           </h1>
           <p className="text-text leading-relaxed mb-6">
@@ -74,7 +74,7 @@ export default function CostCeilingPage() {
             {symptomCosts.map((s) => (
               <div key={s.symptom} className="card-hover">
                 <div className="flex flex-wrap items-center gap-3 mb-2">
-                  <h3 className="font-bold text-navy text-lg">{s.symptom}</h3>
+                  <h3 className="font-bold text-dark text-lg">{s.symptom}</h3>
                   <span className="tag-pill tag-pill--amber">{s.range}</span>
                 </div>
                 <p className="text-sm text-text-light">{s.desc}</p>
@@ -104,8 +104,8 @@ export default function CostCeilingPage() {
               <tbody>
                 {investigationCosts.map((inv) => (
                   <tr key={inv.method}>
-                    <td className="font-bold text-navy">{inv.method}</td>
-                    <td className="text-amber-dark font-semibold">{inv.range}</td>
+                    <td className="font-bold text-dark">{inv.method}</td>
+                    <td className="text-accent-dark font-semibold">{inv.range}</td>
                     <td className="text-sm">{inv.desc}</td>
                   </tr>
                 ))}
@@ -138,7 +138,7 @@ export default function CostCeilingPage() {
               { name: "火災保険の活用", href: "/cost/insurance", tag: "保険" },
             ].map((link) => (
               <Link key={link.href} href={link.href} className="card-hover text-center">
-                <h3 className="font-bold text-navy mb-1">{link.name}</h3>
+                <h3 className="font-bold text-dark mb-1">{link.name}</h3>
                 <span className="tag-pill text-xs">{link.tag}</span>
               </Link>
             ))}
@@ -147,7 +147,7 @@ export default function CostCeilingPage() {
 
         {/* CTA */}
         <section className="py-8">
-          <div className="bg-gradient-to-r from-navy to-navy-light rounded-2xl p-8 text-center text-white">
+          <div className="bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-8 text-center text-white">
             <h2 className="text-2xl font-extrabold mb-3">天井の雨漏りを無料で相談</h2>
             <p className="text-white/80 text-sm mb-4">天井の異変に気づいたら早めの対応が大切です</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

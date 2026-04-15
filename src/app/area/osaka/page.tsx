@@ -63,7 +63,7 @@ export default function AreaOsakaPage() {
         ]} />
 
         <section className="py-8">
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-navy mb-4">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-dark mb-4">
             大阪の雨漏り修理おすすめ業者5選【2026年最新】
           </h1>
           <p className="text-text leading-relaxed mb-6">
@@ -78,7 +78,7 @@ export default function AreaOsakaPage() {
             {services.map((s, i) => (
               <div key={i} className="card-hover">
                 <div className="flex flex-wrap items-center gap-3 mb-2">
-                  <Link href={s.href} className="font-bold text-navy text-lg hover:underline">{s.name}</Link>
+                  <Link href={s.href} className="font-bold text-dark text-lg hover:underline">{s.name}</Link>
                   <span className="tag-pill tag-pill--amber text-xs">{s.speed}</span>
                 </div>
                 <p className="text-sm text-text-light mb-1"><strong>対応エリア:</strong> {s.coverage}</p>
@@ -101,8 +101,8 @@ export default function AreaOsakaPage() {
               <tbody>
                 {osakaCosts.map((c) => (
                   <tr key={c.type}>
-                    <td className="font-bold text-navy">{c.type}</td>
-                    <td className="font-semibold text-amber-dark">{c.range}</td>
+                    <td className="font-bold text-dark">{c.type}</td>
+                    <td className="font-semibold text-accent-dark">{c.range}</td>
                   </tr>
                 ))}
               </tbody>
@@ -115,7 +115,7 @@ export default function AreaOsakaPage() {
           <div className="space-y-4">
             {osakaNotes.map((note, i) => (
               <div key={i} className="card-hover">
-                <h3 className="font-bold text-navy text-lg mb-1">{note.title}</h3>
+                <h3 className="font-bold text-dark text-lg mb-1">{note.title}</h3>
                 <p className="text-sm text-text-light leading-relaxed">{note.desc}</p>
               </div>
             ))}
@@ -145,7 +145,7 @@ export default function AreaOsakaPage() {
               { name: "業者の選び方", href: "/knowledge/how-to-choose", tag: "お役立ち" },
             ].map((link) => (
               <Link key={link.href} href={link.href} className="card-hover text-center">
-                <h3 className="font-bold text-navy mb-1">{link.name}</h3>
+                <h3 className="font-bold text-dark mb-1">{link.name}</h3>
                 <span className="tag-pill text-xs">{link.tag}</span>
               </Link>
             ))}
@@ -153,7 +153,7 @@ export default function AreaOsakaPage() {
         </section>
 
         <section className="py-8">
-          <div className="bg-gradient-to-r from-navy to-navy-light rounded-2xl p-8 text-center text-white">
+          <div className="bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-8 text-center text-white">
             <h2 className="text-2xl font-extrabold mb-3">大阪で雨漏り修理をお探しなら</h2>
             <p className="text-white/80 text-sm mb-4">複数業者の無料見積もりを比較して最適な業者を見つけましょう</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

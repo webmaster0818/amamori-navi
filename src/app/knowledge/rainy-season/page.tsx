@@ -64,7 +64,7 @@ export default function KnowledgeRainySeasonPage() {
         ]} />
 
         <section className="py-8">
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-navy mb-4">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-dark mb-4">
             梅雨の雨漏り対策ガイド【点検5項目と台風への備え】
           </h1>
           <p className="text-text leading-relaxed mb-6">
@@ -78,11 +78,11 @@ export default function KnowledgeRainySeasonPage() {
           <div className="space-y-4">
             {inspectionItems.map((item, i) => (
               <div key={i} className="card-hover flex items-start gap-4">
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-navy text-white text-sm font-bold flex-shrink-0">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white text-sm font-bold flex-shrink-0">
                   {i + 1}
                 </span>
                 <div>
-                  <h3 className="font-bold text-navy text-lg mb-1">{item.title}</h3>
+                  <h3 className="font-bold text-dark text-lg mb-1">{item.title}</h3>
                   <p className="text-sm text-text-light leading-relaxed">{item.desc}</p>
                 </div>
               </div>
@@ -95,7 +95,7 @@ export default function KnowledgeRainySeasonPage() {
           <div className="space-y-4">
             {rainySeasonFeatures.map((f, i) => (
               <div key={i} className="card-hover">
-                <h3 className="font-bold text-navy text-lg mb-1">{f.title}</h3>
+                <h3 className="font-bold text-dark text-lg mb-1">{f.title}</h3>
                 <p className="text-sm text-text-light leading-relaxed">{f.desc}</p>
               </div>
             ))}
@@ -111,7 +111,7 @@ export default function KnowledgeRainySeasonPage() {
                   {i + 1}
                 </span>
                 <div>
-                  <h3 className="font-bold text-navy text-lg mb-1">{t.title}</h3>
+                  <h3 className="font-bold text-dark text-lg mb-1">{t.title}</h3>
                   <p className="text-sm text-text-light leading-relaxed">{t.desc}</p>
                 </div>
               </div>
@@ -141,7 +141,7 @@ export default function KnowledgeRainySeasonPage() {
               { name: "費用相場ガイド", href: "/cost/average", tag: "費用" },
             ].map((link) => (
               <Link key={link.href} href={link.href} className="card-hover text-center">
-                <h3 className="font-bold text-navy mb-1">{link.name}</h3>
+                <h3 className="font-bold text-dark mb-1">{link.name}</h3>
                 <span className="tag-pill text-xs">{link.tag}</span>
               </Link>
             ))}
@@ -149,7 +149,7 @@ export default function KnowledgeRainySeasonPage() {
         </section>
 
         <section className="py-8">
-          <div className="bg-gradient-to-r from-navy to-navy-light rounded-2xl p-8 text-center text-white">
+          <div className="bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-8 text-center text-white">
             <h2 className="text-2xl font-extrabold mb-3">梅雨前の点検は専門業者に</h2>
             <p className="text-white/80 text-sm mb-4">無料点検で雨漏りリスクを事前に把握しましょう</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

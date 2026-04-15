@@ -57,7 +57,7 @@ export default function CostRoofPage() {
 
         {/* Hero */}
         <section className="py-8">
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-navy mb-4">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-dark mb-4">
             屋根の雨漏り修理費用
           </h1>
           <p className="text-text leading-relaxed mb-6">
@@ -82,10 +82,10 @@ export default function CostRoofPage() {
               <tbody>
                 {roofTypeCosts.map((r) => (
                   <tr key={r.type}>
-                    <td className="font-bold text-navy">{r.type}</td>
-                    <td className="text-amber-dark font-semibold">{r.partial}</td>
-                    <td className="text-amber-dark font-semibold">{r.cover}</td>
-                    <td className="text-amber-dark font-semibold">{r.replace}</td>
+                    <td className="font-bold text-dark">{r.type}</td>
+                    <td className="text-accent-dark font-semibold">{r.partial}</td>
+                    <td className="text-accent-dark font-semibold">{r.cover}</td>
+                    <td className="text-accent-dark font-semibold">{r.replace}</td>
                   </tr>
                 ))}
               </tbody>
@@ -94,7 +94,7 @@ export default function CostRoofPage() {
           <div className="space-y-3 mt-6">
             {roofTypeCosts.map((r) => (
               <div key={r.type} className="glass-card p-4">
-                <h3 className="font-bold text-navy mb-1">{r.type}</h3>
+                <h3 className="font-bold text-dark mb-1">{r.type}</h3>
                 <p className="text-sm text-text-light">{r.note}</p>
               </div>
             ))}
@@ -108,7 +108,7 @@ export default function CostRoofPage() {
             {workTypeCosts.map((w) => (
               <div key={w.work} className="card-hover">
                 <div className="flex flex-wrap items-center gap-3 mb-2">
-                  <h3 className="font-bold text-navy text-lg">{w.work}</h3>
+                  <h3 className="font-bold text-dark text-lg">{w.work}</h3>
                   <span className="tag-pill tag-pill--amber">{w.range}</span>
                 </div>
                 <p className="text-sm text-text-light">{w.desc}</p>
@@ -141,7 +141,7 @@ export default function CostRoofPage() {
               { name: "外壁修理の費用", href: "/cost/wall", tag: "外壁" },
             ].map((link) => (
               <Link key={link.href} href={link.href} className="card-hover text-center">
-                <h3 className="font-bold text-navy mb-1">{link.name}</h3>
+                <h3 className="font-bold text-dark mb-1">{link.name}</h3>
                 <span className="tag-pill text-xs">{link.tag}</span>
               </Link>
             ))}
@@ -150,7 +150,7 @@ export default function CostRoofPage() {
 
         {/* CTA */}
         <section className="py-8">
-          <div className="bg-gradient-to-r from-navy to-navy-light rounded-2xl p-8 text-center text-white">
+          <div className="bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-8 text-center text-white">
             <h2 className="text-2xl font-extrabold mb-3">屋根の雨漏りを無料で見積もり</h2>
             <p className="text-white/80 text-sm mb-4">複数業者の見積もりを比較して、適正価格で修理しましょう</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

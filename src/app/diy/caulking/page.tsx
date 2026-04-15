@@ -80,7 +80,7 @@ export default function DiyCaulkingPage() {
 
         {/* Hero */}
         <section className="py-8">
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-navy mb-4">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-dark mb-4">
             雨漏りコーキング補修を自分でやる方法【7ステップ】
           </h1>
           <p className="text-text leading-relaxed mb-6">
@@ -96,11 +96,11 @@ export default function DiyCaulkingPage() {
           <div className="space-y-4">
             {caulkingSteps.map((step, i) => (
               <div key={i} className="card-hover flex items-start gap-4">
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-navy text-white text-sm font-bold flex-shrink-0">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white text-sm font-bold flex-shrink-0">
                   {i + 1}
                 </span>
                 <div>
-                  <h3 className="font-bold text-navy text-lg mb-1">{step.title}</h3>
+                  <h3 className="font-bold text-dark text-lg mb-1">{step.title}</h3>
                   <p className="text-sm text-text-light leading-relaxed">{step.desc}</p>
                 </div>
               </div>
@@ -123,15 +123,15 @@ export default function DiyCaulkingPage() {
               <tbody>
                 {tools.map((t) => (
                   <tr key={t.name}>
-                    <td className="font-bold text-navy">{t.name}</td>
-                    <td className="font-semibold text-amber-dark">{t.price}</td>
+                    <td className="font-bold text-dark">{t.name}</td>
+                    <td className="font-semibold text-accent-dark">{t.price}</td>
                     <td className="text-sm">{t.note}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <p className="text-sm text-text-light mt-3">合計費用の目安: <strong className="text-navy">2,000〜5,000円</strong>程度</p>
+          <p className="text-sm text-text-light mt-3">合計費用の目安: <strong className="text-dark">2,000〜5,000円</strong>程度</p>
         </section>
 
         {/* DIYの対応範囲と限界 */}
@@ -141,7 +141,7 @@ export default function DiyCaulkingPage() {
             <div className="space-y-3">
               {diyScope.map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <span className={`flex-shrink-0 text-lg ${item.ok ? "text-green-600" : "text-red-500"}`}>
+                  <span className={`flex-shrink-0 text-lg ${item.ok ? "text-primary-600" : "text-red-500"}`}>
                     {item.ok ? "○" : "×"}
                   </span>
                   <p className="text-text">{item.text}</p>
@@ -161,7 +161,7 @@ export default function DiyCaulkingPage() {
                   {i + 1}
                 </span>
                 <div>
-                  <h3 className="font-bold text-navy text-lg mb-1">{tip.title}</h3>
+                  <h3 className="font-bold text-dark text-lg mb-1">{tip.title}</h3>
                   <p className="text-sm text-text-light leading-relaxed">{tip.desc}</p>
                 </div>
               </div>
@@ -192,7 +192,7 @@ export default function DiyCaulkingPage() {
               { name: "費用相場ガイド", href: "/cost/average", tag: "費用" },
             ].map((link) => (
               <Link key={link.href} href={link.href} className="card-hover text-center">
-                <h3 className="font-bold text-navy mb-1">{link.name}</h3>
+                <h3 className="font-bold text-dark mb-1">{link.name}</h3>
                 <span className="tag-pill text-xs">{link.tag}</span>
               </Link>
             ))}
@@ -201,7 +201,7 @@ export default function DiyCaulkingPage() {
 
         {/* CTA */}
         <section className="py-8">
-          <div className="bg-gradient-to-r from-navy to-navy-light rounded-2xl p-8 text-center text-white">
+          <div className="bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-8 text-center text-white">
             <h2 className="text-2xl font-extrabold mb-3">DIYで解決しない場合はプロに相談</h2>
             <p className="text-white/80 text-sm mb-4">無料見積もりで適正価格を確認しましょう</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

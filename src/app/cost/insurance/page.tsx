@@ -83,7 +83,7 @@ export default function CostInsurancePage() {
 
         {/* Hero */}
         <section className="py-8">
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-navy mb-4">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-dark mb-4">
             雨漏り修理に火災保険は使える？
           </h1>
           <p className="text-text leading-relaxed mb-6">
@@ -99,9 +99,9 @@ export default function CostInsurancePage() {
             {coveredCases.map((c) => (
               <div key={c.case} className="card-hover">
                 <div className="flex items-start gap-3">
-                  <span className="text-green mt-0.5 flex-shrink-0 text-lg">&#10003;</span>
+                  <span className="text-primary mt-0.5 flex-shrink-0 text-lg">&#10003;</span>
                   <div>
-                    <h3 className="font-bold text-navy mb-1">{c.case}</h3>
+                    <h3 className="font-bold text-dark mb-1">{c.case}</h3>
                     <p className="text-sm text-text-light">{c.desc}</p>
                   </div>
                 </div>
@@ -117,9 +117,9 @@ export default function CostInsurancePage() {
             {notCoveredCases.map((c) => (
               <div key={c.case} className="card-hover">
                 <div className="flex items-start gap-3">
-                  <span className="text-amber-dark mt-0.5 flex-shrink-0 text-lg">&#10007;</span>
+                  <span className="text-accent-dark mt-0.5 flex-shrink-0 text-lg">&#10007;</span>
                   <div>
-                    <h3 className="font-bold text-navy mb-1">{c.case}</h3>
+                    <h3 className="font-bold text-dark mb-1">{c.case}</h3>
                     <p className="text-sm text-text-light">{c.desc}</p>
                   </div>
                 </div>
@@ -134,11 +134,11 @@ export default function CostInsurancePage() {
           <div className="space-y-4">
             {steps.map((s) => (
               <div key={s.num} className="card-hover flex items-start gap-4">
-                <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-navy text-white text-xl font-extrabold flex-shrink-0">
+                <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white text-xl font-extrabold flex-shrink-0">
                   {s.num}
                 </span>
                 <div>
-                  <h3 className="font-bold text-navy text-lg mb-1">{s.title}</h3>
+                  <h3 className="font-bold text-dark text-lg mb-1">{s.title}</h3>
                   <p className="text-sm text-text-light leading-relaxed">{s.desc}</p>
                 </div>
               </div>
@@ -153,7 +153,7 @@ export default function CostInsurancePage() {
             <ul className="space-y-2">
               {requiredDocs.map((doc, i) => (
                 <li key={i} className="flex items-start gap-2 text-sm">
-                  <span className="text-navy mt-0.5 flex-shrink-0 font-bold">{i + 1}.</span>
+                  <span className="text-dark mt-0.5 flex-shrink-0 font-bold">{i + 1}.</span>
                   {doc}
                 </li>
               ))}
@@ -166,8 +166,8 @@ export default function CostInsurancePage() {
           <h2 className="section-title">火災保険申請の注意点</h2>
           <div className="space-y-4">
             {cautions.map((c, i) => (
-              <div key={i} className="card-hover !border-amber/30">
-                <h3 className="font-bold text-amber-dark mb-1">{c.title}</h3>
+              <div key={i} className="card-hover !border-accent/30">
+                <h3 className="font-bold text-accent-dark mb-1">{c.title}</h3>
                 <p className="text-sm text-text-light">{c.desc}</p>
               </div>
             ))}
@@ -198,7 +198,7 @@ export default function CostInsurancePage() {
               { name: "天井修理の費用", href: "/cost/ceiling", tag: "天井" },
             ].map((link) => (
               <Link key={link.href} href={link.href} className="card-hover text-center">
-                <h3 className="font-bold text-navy mb-1">{link.name}</h3>
+                <h3 className="font-bold text-dark mb-1">{link.name}</h3>
                 <span className="tag-pill text-xs">{link.tag}</span>
               </Link>
             ))}
@@ -207,7 +207,7 @@ export default function CostInsurancePage() {
 
         {/* CTA */}
         <section className="py-8">
-          <div className="bg-gradient-to-r from-navy to-navy-light rounded-2xl p-8 text-center text-white">
+          <div className="bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-8 text-center text-white">
             <h2 className="text-2xl font-extrabold mb-3">火災保険申請にも対応した業者を探す</h2>
             <p className="text-white/80 text-sm mb-4">保険申請サポート付きの業者に無料相談しましょう</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

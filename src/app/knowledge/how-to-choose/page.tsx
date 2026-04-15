@@ -60,7 +60,7 @@ export default function KnowledgeHowToChoosePage() {
         ]} />
 
         <section className="py-8">
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-navy mb-4">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-dark mb-4">
             雨漏り修理業者の選び方【7つのポイント】
           </h1>
           <p className="text-text leading-relaxed mb-6">
@@ -74,11 +74,11 @@ export default function KnowledgeHowToChoosePage() {
           <div className="space-y-4">
             {selectPoints.map((p, i) => (
               <div key={i} className="card-hover flex items-start gap-4">
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-navy text-white text-sm font-bold flex-shrink-0">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white text-sm font-bold flex-shrink-0">
                   {i + 1}
                 </span>
                 <div>
-                  <h3 className="font-bold text-navy text-lg mb-1">{p.title}</h3>
+                  <h3 className="font-bold text-dark text-lg mb-1">{p.title}</h3>
                   <p className="text-sm text-text-light leading-relaxed">{p.desc}</p>
                 </div>
               </div>
@@ -95,7 +95,7 @@ export default function KnowledgeHowToChoosePage() {
                   {i + 1}
                 </span>
                 <div>
-                  <h3 className="font-bold text-navy text-lg mb-1">{s.title}</h3>
+                  <h3 className="font-bold text-dark text-lg mb-1">{s.title}</h3>
                   <p className="text-sm text-text-light leading-relaxed">{s.desc}</p>
                 </div>
               </div>
@@ -126,7 +126,7 @@ export default function KnowledgeHowToChoosePage() {
               { name: "よくある質問", href: "/faq", tag: "FAQ" },
             ].map((link) => (
               <Link key={link.href} href={link.href} className="card-hover text-center">
-                <h3 className="font-bold text-navy mb-1">{link.name}</h3>
+                <h3 className="font-bold text-dark mb-1">{link.name}</h3>
                 <span className="tag-pill text-xs">{link.tag}</span>
               </Link>
             ))}
@@ -134,7 +134,7 @@ export default function KnowledgeHowToChoosePage() {
         </section>
 
         <section className="py-8">
-          <div className="bg-gradient-to-r from-navy to-navy-light rounded-2xl p-8 text-center text-white">
+          <div className="bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-8 text-center text-white">
             <h2 className="text-2xl font-extrabold mb-3">信頼できる業者を見つけよう</h2>
             <p className="text-white/80 text-sm mb-4">当サイト厳選のおすすめ業者から無料見積もりを取れます</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

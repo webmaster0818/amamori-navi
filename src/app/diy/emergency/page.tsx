@@ -62,7 +62,7 @@ export default function DiyEmergencyPage() {
 
         {/* Hero */}
         <section className="py-8">
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-navy mb-4">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-dark mb-4">
             雨漏り応急処置ガイド【自分でできる8ステップ】
           </h1>
           <p className="text-text leading-relaxed mb-6">
@@ -78,11 +78,11 @@ export default function DiyEmergencyPage() {
           <div className="space-y-4">
             {emergencySteps.map((step, i) => (
               <div key={i} className="card-hover flex items-start gap-4">
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-navy text-white text-sm font-bold flex-shrink-0">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white text-sm font-bold flex-shrink-0">
                   {i + 1}
                 </span>
                 <div>
-                  <h3 className="font-bold text-navy text-lg mb-1">{step.title}</h3>
+                  <h3 className="font-bold text-dark text-lg mb-1">{step.title}</h3>
                   <p className="text-sm text-text-light leading-relaxed">{step.desc}</p>
                 </div>
               </div>
@@ -145,7 +145,7 @@ export default function DiyEmergencyPage() {
               { name: "悪徳業者の見分け方", href: "/knowledge/scam", tag: "注意" },
             ].map((link) => (
               <Link key={link.href} href={link.href} className="card-hover text-center">
-                <h3 className="font-bold text-navy mb-1">{link.name}</h3>
+                <h3 className="font-bold text-dark mb-1">{link.name}</h3>
                 <span className="tag-pill text-xs">{link.tag}</span>
               </Link>
             ))}
@@ -154,7 +154,7 @@ export default function DiyEmergencyPage() {
 
         {/* CTA */}
         <section className="py-8">
-          <div className="bg-gradient-to-r from-navy to-navy-light rounded-2xl p-8 text-center text-white">
+          <div className="bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-8 text-center text-white">
             <h2 className="text-2xl font-extrabold mb-3">応急処置の後は専門業者に相談</h2>
             <p className="text-white/80 text-sm mb-4">根本的な修理は専門業者に任せましょう。無料見積もりで適正価格を確認できます</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

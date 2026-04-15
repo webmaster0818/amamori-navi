@@ -73,7 +73,7 @@ export default function KnowledgeScamPage() {
         ]} />
 
         <section className="py-8">
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-navy mb-4">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-dark mb-4">
             雨漏り修理の悪徳業者の見分け方【8つの手口】
           </h1>
           <p className="text-text leading-relaxed mb-6">
@@ -100,7 +100,7 @@ export default function KnowledgeScamPage() {
             <div className="space-y-3">
               {checklist.map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <span className="flex-shrink-0 text-green-600 font-bold">□</span>
+                  <span className="flex-shrink-0 text-primary-600 font-bold">□</span>
                   <p className="text-text">{item}</p>
                 </div>
               ))}
@@ -113,11 +113,11 @@ export default function KnowledgeScamPage() {
           <div className="space-y-4">
             {remedies.map((r, i) => (
               <div key={i} className="card-hover flex items-start gap-4">
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-navy text-white text-sm font-bold flex-shrink-0">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white text-sm font-bold flex-shrink-0">
                   {i + 1}
                 </span>
                 <div>
-                  <h3 className="font-bold text-navy text-lg mb-1">{r.title}</h3>
+                  <h3 className="font-bold text-dark text-lg mb-1">{r.title}</h3>
                   <p className="text-sm text-text-light leading-relaxed">{r.desc}</p>
                 </div>
               </div>
@@ -146,7 +146,7 @@ export default function KnowledgeScamPage() {
               { name: "費用相場ガイド", href: "/cost/average", tag: "費用" },
             ].map((link) => (
               <Link key={link.href} href={link.href} className="card-hover text-center">
-                <h3 className="font-bold text-navy mb-1">{link.name}</h3>
+                <h3 className="font-bold text-dark mb-1">{link.name}</h3>
                 <span className="tag-pill text-xs">{link.tag}</span>
               </Link>
             ))}
@@ -154,7 +154,7 @@ export default function KnowledgeScamPage() {
         </section>
 
         <section className="py-8">
-          <div className="bg-gradient-to-r from-navy to-navy-light rounded-2xl p-8 text-center text-white">
+          <div className="bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-8 text-center text-white">
             <h2 className="text-2xl font-extrabold mb-3">信頼できる業者に依頼しましょう</h2>
             <p className="text-white/80 text-sm mb-4">当サイトでは実績のある信頼できる業者のみを掲載しています</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

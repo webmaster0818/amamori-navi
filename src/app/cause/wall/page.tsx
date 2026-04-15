@@ -52,7 +52,7 @@ export default function CauseWallPage() {
 
         {/* Hero */}
         <section className="py-8">
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-navy mb-4">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-dark mb-4">
             外壁の雨漏り原因6つ
           </h1>
           <p className="text-text leading-relaxed mb-6">
@@ -68,11 +68,11 @@ export default function CauseWallPage() {
           <div className="space-y-4">
             {causes.map((c) => (
               <div key={c.num} className="card-hover flex items-start gap-4">
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-navy text-white text-lg font-extrabold flex-shrink-0">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white text-lg font-extrabold flex-shrink-0">
                   {c.num}
                 </span>
                 <div>
-                  <h3 className="font-bold text-navy text-lg mb-1">{c.title}</h3>
+                  <h3 className="font-bold text-dark text-lg mb-1">{c.title}</h3>
                   <p className="text-sm text-text-light leading-relaxed">{c.desc}</p>
                 </div>
               </div>
@@ -104,7 +104,7 @@ export default function CauseWallPage() {
               { name: "ベランダの雨漏り", href: "/cause/balcony", tag: "ベランダ" },
             ].map((link) => (
               <Link key={link.href} href={link.href} className="card-hover text-center">
-                <h3 className="font-bold text-navy mb-1">{link.name}</h3>
+                <h3 className="font-bold text-dark mb-1">{link.name}</h3>
                 <span className="tag-pill text-xs">{link.tag}</span>
               </Link>
             ))}
@@ -113,7 +113,7 @@ export default function CauseWallPage() {
 
         {/* CTA */}
         <section className="py-8">
-          <div className="bg-gradient-to-r from-navy to-navy-light rounded-2xl p-8 text-center text-white">
+          <div className="bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-8 text-center text-white">
             <h2 className="text-2xl font-extrabold mb-3">外壁の雨漏りを無料で点検</h2>
             <p className="text-white/80 text-sm mb-4">原因の特定から修理まで、プロに任せて安心</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

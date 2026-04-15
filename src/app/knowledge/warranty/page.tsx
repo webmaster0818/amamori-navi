@@ -65,7 +65,7 @@ export default function KnowledgeWarrantyPage() {
         ]} />
 
         <section className="py-8">
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-navy mb-4">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-dark mb-4">
             雨漏り修理の保証ガイド【施工保証・メーカー保証・瑕疵保険】
           </h1>
           <p className="text-text leading-relaxed mb-6">
@@ -80,7 +80,7 @@ export default function KnowledgeWarrantyPage() {
             {warrantyTypes.map((w, i) => (
               <div key={i} className="card-hover">
                 <div className="flex flex-wrap items-center gap-3 mb-2">
-                  <h3 className="font-bold text-navy text-lg">{w.title}</h3>
+                  <h3 className="font-bold text-dark text-lg">{w.title}</h3>
                   <span className="tag-pill tag-pill--amber text-xs">{w.period}</span>
                 </div>
                 <p className="text-sm text-text-light leading-relaxed">{w.desc}</p>
@@ -102,8 +102,8 @@ export default function KnowledgeWarrantyPage() {
               <tbody>
                 {periodGuide.map((p) => (
                   <tr key={p.work}>
-                    <td className="font-bold text-navy">{p.work}</td>
-                    <td className="font-semibold text-amber-dark">{p.period}</td>
+                    <td className="font-bold text-dark">{p.work}</td>
+                    <td className="font-semibold text-accent-dark">{p.period}</td>
                   </tr>
                 ))}
               </tbody>
@@ -116,11 +116,11 @@ export default function KnowledgeWarrantyPage() {
           <div className="space-y-4">
             {checkPoints.map((c, i) => (
               <div key={i} className="card-hover flex items-start gap-4">
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-navy text-white text-sm font-bold flex-shrink-0">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white text-sm font-bold flex-shrink-0">
                   {i + 1}
                 </span>
                 <div>
-                  <h3 className="font-bold text-navy text-lg mb-1">{c.title}</h3>
+                  <h3 className="font-bold text-dark text-lg mb-1">{c.title}</h3>
                   <p className="text-sm text-text-light leading-relaxed">{c.desc}</p>
                 </div>
               </div>
@@ -149,7 +149,7 @@ export default function KnowledgeWarrantyPage() {
               { name: "費用相場ガイド", href: "/cost/average", tag: "費用" },
             ].map((link) => (
               <Link key={link.href} href={link.href} className="card-hover text-center">
-                <h3 className="font-bold text-navy mb-1">{link.name}</h3>
+                <h3 className="font-bold text-dark mb-1">{link.name}</h3>
                 <span className="tag-pill text-xs">{link.tag}</span>
               </Link>
             ))}
@@ -157,7 +157,7 @@ export default function KnowledgeWarrantyPage() {
         </section>
 
         <section className="py-8">
-          <div className="bg-gradient-to-r from-navy to-navy-light rounded-2xl p-8 text-center text-white">
+          <div className="bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-8 text-center text-white">
             <h2 className="text-2xl font-extrabold mb-3">保証のしっかりした業者を選ぼう</h2>
             <p className="text-white/80 text-sm mb-4">当サイト掲載の業者は保証体制が充実しています</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

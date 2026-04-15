@@ -64,7 +64,7 @@ export default function CauseNewHousePage() {
 
         {/* Hero */}
         <section className="py-8">
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-navy mb-4">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-dark mb-4">
             新築・築浅の雨漏り原因と対処法
           </h1>
           <p className="text-text leading-relaxed mb-6">
@@ -80,11 +80,11 @@ export default function CauseNewHousePage() {
           <div className="space-y-4">
             {causes.map((c, i) => (
               <div key={i} className="card-hover flex items-start gap-4">
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-navy text-white text-lg font-extrabold flex-shrink-0">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white text-lg font-extrabold flex-shrink-0">
                   {i + 1}
                 </span>
                 <div>
-                  <h3 className="font-bold text-navy text-lg mb-1">{c.title}</h3>
+                  <h3 className="font-bold text-dark text-lg mb-1">{c.title}</h3>
                   <p className="text-sm text-text-light leading-relaxed">{c.desc}</p>
                 </div>
               </div>
@@ -98,13 +98,13 @@ export default function CauseNewHousePage() {
           <div className="space-y-6">
             {warrantyInfo.map((info, i) => (
               <div key={i} className="glass-card p-6">
-                <h3 className="font-bold text-navy text-lg mb-3">{info.title}</h3>
+                <h3 className="font-bold text-dark text-lg mb-3">{info.title}</h3>
                 {info.desc && <p className="text-sm text-text-light leading-relaxed">{info.desc}</p>}
                 {info.items && (
                   <ul className="space-y-2">
                     {info.items.map((item, j) => (
                       <li key={j} className="flex items-start gap-2 text-sm">
-                        <span className={`mt-0.5 flex-shrink-0 ${info.title.includes("対象外") ? "text-amber-dark" : "text-green"}`}>
+                        <span className={`mt-0.5 flex-shrink-0 ${info.title.includes("対象外") ? "text-accent-dark" : "text-primary"}`}>
                           {info.title.includes("対象外") ? "\u2717" : "\u2713"}
                         </span>
                         <span className="text-text-light">{item}</span>
@@ -123,11 +123,11 @@ export default function CauseNewHousePage() {
           <div className="space-y-4">
             {steps.map((s) => (
               <div key={s.num} className="card-hover flex items-start gap-4">
-                <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-navy text-white text-xl font-extrabold flex-shrink-0">
+                <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white text-xl font-extrabold flex-shrink-0">
                   {s.num}
                 </span>
                 <div>
-                  <h3 className="font-bold text-navy text-lg mb-1">{s.title}</h3>
+                  <h3 className="font-bold text-dark text-lg mb-1">{s.title}</h3>
                   <p className="text-sm text-text-light leading-relaxed">{s.desc}</p>
                 </div>
               </div>
@@ -159,7 +159,7 @@ export default function CauseNewHousePage() {
               { name: "火災保険の活用", href: "/cost/insurance", tag: "保険" },
             ].map((link) => (
               <Link key={link.href} href={link.href} className="card-hover text-center">
-                <h3 className="font-bold text-navy mb-1">{link.name}</h3>
+                <h3 className="font-bold text-dark mb-1">{link.name}</h3>
                 <span className="tag-pill text-xs">{link.tag}</span>
               </Link>
             ))}
@@ -168,7 +168,7 @@ export default function CauseNewHousePage() {
 
         {/* CTA */}
         <section className="py-8">
-          <div className="bg-gradient-to-r from-navy to-navy-light rounded-2xl p-8 text-center text-white">
+          <div className="bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-8 text-center text-white">
             <h2 className="text-2xl font-extrabold mb-3">新築の雨漏りもプロに相談</h2>
             <p className="text-white/80 text-sm mb-4">第三者の専門家に原因を診断してもらいましょう</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

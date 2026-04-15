@@ -69,7 +69,7 @@ export default function TatsujinPage() {
           <div className="flex items-center gap-3 mb-4">
             <span className="rank-badge rank-badge--3">3</span>
             <div>
-              <h1 className="text-2xl sm:text-3xl font-extrabold text-navy">雨漏り修理の達人</h1>
+              <h1 className="text-2xl sm:text-3xl font-extrabold text-dark">雨漏り修理の達人</h1>
               <p className="text-sm text-text-light">amamori-tatsujin.com</p>
             </div>
           </div>
@@ -91,10 +91,10 @@ export default function TatsujinPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {steps.map((s) => (
               <div key={s.num} className="card-hover text-center">
-                <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-navy text-white text-xl font-extrabold mb-3">
+                <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white text-xl font-extrabold mb-3">
                   {s.num}
                 </span>
-                <h3 className="font-bold text-navy mb-2">{s.title}</h3>
+                <h3 className="font-bold text-dark mb-2">{s.title}</h3>
                 <p className="text-sm text-text-light">{s.desc}</p>
               </div>
             ))}
@@ -105,22 +105,22 @@ export default function TatsujinPage() {
         <section className="py-8">
           <h2 className="section-title">メリット・デメリット</h2>
           <div className="grid sm:grid-cols-2 gap-6">
-            <div className="card-hover !border-green/30">
-              <h3 className="font-bold text-green text-lg mb-3">メリット</h3>
+            <div className="card-hover !border-primary/30">
+              <h3 className="font-bold text-primary text-lg mb-3">メリット</h3>
               <ul className="space-y-2">
                 {pros.map((p, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm">
-                    <span className="text-green mt-0.5 flex-shrink-0">&#10003;</span>{p}
+                    <span className="text-primary mt-0.5 flex-shrink-0">&#10003;</span>{p}
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="card-hover !border-amber/30">
-              <h3 className="font-bold text-amber-dark text-lg mb-3">デメリット</h3>
+            <div className="card-hover !border-accent/30">
+              <h3 className="font-bold text-accent-dark text-lg mb-3">デメリット</h3>
               <ul className="space-y-2">
                 {cons.map((c, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm">
-                    <span className="text-amber-dark mt-0.5 flex-shrink-0">&#9650;</span>{c}
+                    <span className="text-accent-dark mt-0.5 flex-shrink-0">&#9650;</span>{c}
                   </li>
                 ))}
               </ul>
@@ -140,7 +140,7 @@ export default function TatsujinPage() {
               <div key={i} className="card-hover flex items-start gap-4">
                 <span className="rank-badge rank-badge--4 flex-shrink-0 !w-10 !h-10 !text-base">{i + 1}</span>
                 <div>
-                  <h3 className="font-bold text-navy mb-1">{item.title}</h3>
+                  <h3 className="font-bold text-dark mb-1">{item.title}</h3>
                   <p className="text-sm text-text-light">{item.desc}</p>
                 </div>
               </div>
@@ -163,7 +163,7 @@ export default function TatsujinPage() {
 
         {/* CTA */}
         <section className="py-8">
-          <div className="bg-gradient-to-r from-navy to-navy-light rounded-2xl p-8 text-center text-white">
+          <div className="bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-8 text-center text-white">
             <h2 className="text-2xl font-extrabold mb-3">雨漏り修理の達人で職人を探す</h2>
             <p className="text-white/80 text-sm mb-4">自社施工・仲介手数料なし・厳選職人</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -186,7 +186,7 @@ export default function TatsujinPage() {
               { name: "くらしのマーケット", slug: "kurashi", tag: "口コミ" },
             ].map((s) => (
               <Link key={s.slug} href={`/review/${s.slug}/`} className="card-hover text-center">
-                <h3 className="font-bold text-navy mb-1">{s.name}</h3>
+                <h3 className="font-bold text-dark mb-1">{s.name}</h3>
                 <span className="tag-pill text-xs">{s.tag}</span>
               </Link>
             ))}

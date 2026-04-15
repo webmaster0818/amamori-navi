@@ -98,7 +98,7 @@ export default function FaqPage() {
 
         {/* Hero */}
         <section className="py-8">
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-navy mb-4">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-dark mb-4">
             雨漏り修理のよくある質問30選
           </h1>
           <p className="text-text leading-relaxed mb-6">
@@ -110,10 +110,10 @@ export default function FaqPage() {
         {/* カテゴリ目次 */}
         <section className="py-4">
           <div className="glass-card p-6">
-            <h2 className="font-bold text-navy text-lg mb-3">目次</h2>
+            <h2 className="font-bold text-dark text-lg mb-3">目次</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2">
               {faqCategories.map((c, i) => (
-                <a key={i} href={`#category-${i}`} className="text-sm text-navy hover:underline">
+                <a key={i} href={`#category-${i}`} className="text-sm text-dark hover:underline">
                   {i + 1}. {c.category}（{c.faqs.length}問）
                 </a>
               ))}
@@ -149,7 +149,7 @@ export default function FaqPage() {
               { name: "マンション・賃貸", href: "/knowledge/apartment", tag: "マンション" },
             ].map((link) => (
               <Link key={link.href} href={link.href} className="card-hover text-center">
-                <h3 className="font-bold text-navy mb-1">{link.name}</h3>
+                <h3 className="font-bold text-dark mb-1">{link.name}</h3>
                 <span className="tag-pill text-xs">{link.tag}</span>
               </Link>
             ))}
@@ -158,7 +158,7 @@ export default function FaqPage() {
 
         {/* CTA */}
         <section className="py-8">
-          <div className="bg-gradient-to-r from-navy to-navy-light rounded-2xl p-8 text-center text-white">
+          <div className="bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-8 text-center text-white">
             <h2 className="text-2xl font-extrabold mb-3">雨漏りでお困りなら</h2>
             <p className="text-white/80 text-sm mb-4">まずは無料見積もりで費用と修理内容を確認しましょう</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
