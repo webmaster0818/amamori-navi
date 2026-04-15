@@ -1,0 +1,245 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-navy: #1E3A5F;
+  --color-navy-light: #2A4F7F;
+  --color-navy-dark: #152B47;
+  --color-amber: #D97706;
+  --color-amber-light: #F59E0B;
+  --color-amber-dark: #B45309;
+  --color-green: #059669;
+  --color-green-light: #10B981;
+  --color-green-dark: #047857;
+  --color-bg: #F8FAFC;
+  --color-bg-white: #FFFFFF;
+  --color-text: #1E293B;
+  --color-text-light: #64748B;
+  --color-text-lighter: #94A3B8;
+  --color-border: #E2E8F0;
+  --color-border-light: #F1F5F9;
+  --font-zen: "Zen Kaku Gothic New", sans-serif;
+}
+
+/* ===== Base ===== */
+body {
+  font-family: var(--font-zen);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.8;
+}
+
+/* ===== Glass Card ===== */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.6);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(30, 58, 95, 0.06);
+}
+
+/* ===== Buttons ===== */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(30, 58, 95, 0.25);
+  text-decoration: none;
+  font-size: 1rem;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(30, 58, 95, 0.35);
+}
+
+.btn-accent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: linear-gradient(135deg, var(--color-amber) 0%, var(--color-amber-light) 100%);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.3);
+  text-decoration: none;
+  font-size: 1rem;
+}
+.btn-accent:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(217, 119, 6, 0.4);
+}
+
+/* ===== Card Hover ===== */
+.card-hover {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 12px rgba(30, 58, 95, 0.04);
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(30, 58, 95, 0.1);
+  border-color: var(--color-navy);
+}
+
+/* ===== Tag Pill ===== */
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  background: rgba(30, 58, 95, 0.08);
+  color: var(--color-navy);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+.tag-pill--amber {
+  background: rgba(217, 119, 6, 0.1);
+  color: var(--color-amber-dark);
+}
+.tag-pill--green {
+  background: rgba(5, 150, 105, 0.1);
+  color: var(--color-green-dark);
+}
+
+/* ===== Section Title ===== */
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  position: relative;
+  padding-bottom: 0.75rem;
+  margin-bottom: 2rem;
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 3rem;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-amber), var(--color-green));
+  border-radius: 2px;
+}
+
+/* ===== Comparison Table ===== */
+.comparison-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  font-size: 0.9375rem;
+}
+.comparison-table thead {
+  background: var(--color-navy);
+  color: #fff;
+}
+.comparison-table th {
+  padding: 1rem;
+  font-weight: 700;
+  text-align: left;
+  white-space: nowrap;
+}
+.comparison-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-border-light);
+  vertical-align: top;
+}
+.comparison-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.comparison-table tbody tr:hover {
+  background: rgba(30, 58, 95, 0.02);
+}
+.comparison-table tbody tr:nth-child(even) {
+  background: rgba(248, 250, 252, 0.5);
+}
+
+/* ===== FAQ Item ===== */
+.faq-item {
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+.faq-item:hover {
+  border-color: var(--color-navy);
+}
+.faq-item summary {
+  padding: 1.25rem 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  list-style: none;
+  background: #fff;
+  color: var(--color-navy);
+  font-size: 1rem;
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item summary::before {
+  content: "Q.";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background: var(--color-navy);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.875rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.faq-item[open] summary {
+  border-bottom: 1px solid var(--color-border-light);
+}
+.faq-item .faq-answer {
+  padding: 1.25rem 1.5rem 1.25rem 4rem;
+  color: var(--color-text);
+  line-height: 1.9;
+  background: #FAFBFD;
+}
+
+/* ===== Responsive Table Wrapper ===== */
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 12px;
+}
+
+/* ===== Rank Badge ===== */
+.rank-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 1.125rem;
+  color: #fff;
+  flex-shrink: 0;
+}
+.rank-badge--1 { background: linear-gradient(135deg, #D97706, #F59E0B); }
+.rank-badge--2 { background: linear-gradient(135deg, #64748B, #94A3B8); }
+.rank-badge--3 { background: linear-gradient(135deg, #92400E, #B45309); }
+.rank-badge--4 { background: linear-gradient(135deg, #1E3A5F, #2A4F7F); }
+.rank-badge--5 { background: linear-gradient(135deg, #059669, #10B981); }
